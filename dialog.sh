@@ -25,20 +25,20 @@ while true; do
 					exit 0
 				else
 					case "$escolha" in
-									ifconfig)
-											dialog --title "output do ifconfig" --msgbox "$(ifconfig)" 0 0
-											[ $? -eq 0 ]; continue
-											;;
-									lsusb)
-											dialog --title "output do lsusb" --msgbox "$(lsusb)" 0 0
-											[ $? -eq 0 ]; continue
-											;;
-							esac
+						ifconfig)
+							dialog --title "output do ifconfig" --msgbox "$(ifconfig)" 0 0
+							[ $? -eq 0 ]; continue
+							;;
+						lsusb)
+							dialog --title "output do lsusb" --msgbox "$(lsusb)" 0 0
+							[ $? -eq 0 ]; continue
+							;;
+					esac
 				fi
 			done
 		else
-				dialog --title "usuário ou senha incorreta(o), tente novamente!" --msgbox "Senha incorreta, tente novamente!" 0 0
-				continue
+			dialog --title "usuário ou senha incorreta(o), tente novamente!" --msgbox "Senha incorreta, tente novamente!" 0 0
+			continue
 		fi
 	fi
 done
